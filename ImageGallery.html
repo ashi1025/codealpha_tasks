@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="ImageGallery.css">
+</head>
+<body>
+  <h1 class="title">Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('people')">People</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image nature">
+      <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=2210&quality=70" alt="Nature 1" onclick="openLightbox(this)">
+    </div>
+    <div class="image city">
+      <img src="http://getwallpapers.com/wallpaper/full/0/7/1/773059-free-download-city-skyline-background-1920x1200-mobile.jpg" alt="City 1" onclick="openLightbox(this)">
+    </div>
+    <div class="image people">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.Ya8HGbCIcxSZ-SWNYKpOHAHaE6&pid=Api&P=0&h=180" alt="People 1" onclick="openLightbox(this)">
+    </div>
+    <div class="image nature">
+      <img src="http://wallup.net/wp-content/uploads/2016/06/23/398977-nature-landscape-trees-mountains-reflection.jpg" alt="Nature 2" onclick="openLightbox(this)">
+    </div>
+    <div class="image city">
+      <img src="https://i.pinimg.com/originals/d6/30/7b/d6307bd26ed7a3e42c7cc8b28713890c.jpg" alt="City 2" onclick="openLightbox(this)">
+    </div>
+    <div class="image people">
+      <img src="https://static.vecteezy.com/system/resources/previews/027/875/966/non_2x/large-mixed-group-of-multicultural-people-international-students-or-friends-diversity-concept-ai-generative-photo.jpg" alt="People 2" onclick="openLightbox(this)">
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="">
+    <div class="navigation">
+      <button onclick="prevImage()">&#10094;</button>
+      <button onclick="nextImage()">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
